@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:news_app/Home/custom_drawer.dart';
 
-class HomeScreen extends StatelessWidget {
-  static const String routeName = 'homeScreen';
+import '../Home/custom_drawer.dart';
 
-  const HomeScreen({super.key});
+class Settings extends StatelessWidget {
+  static const String routeName = 'SettingsScreen';
+
+  const Settings({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('${AppLocalizations.of(context)!.news}',
+        title: Text('${AppLocalizations.of(context)!.settings}',
             style: Theme.of(context).textTheme.titleLarge),
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(40))),

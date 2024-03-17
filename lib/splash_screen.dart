@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlutterSplashScreen(
       duration: const Duration(seconds: 3),
-      nextScreen: const HomeScreen(),
+      nextScreen: HomeScreen(),
       backgroundColor: Colors.white,
       splashScreenBody: Center(
           child: Image.asset(
