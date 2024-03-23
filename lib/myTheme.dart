@@ -7,9 +7,9 @@ class MyTheme {
       primaryColor: greenColor,
       appBarTheme: const AppBarTheme(
           backgroundColor: greenColor,
+          titleTextStyle: TextStyle(
+              fontSize: 22, color: whiteColor, fontWeight: FontWeight.w400),
           centerTitle: true,
           iconTheme: IconThemeData(color: whiteColor)),
-      drawerTheme: const DrawerThemeData(backgroundColor: whiteColor),
-      textTheme: const TextTheme(
-          titleLarge: TextStyle(fontSize: 22, color: whiteColor)));
+      drawerTheme: const DrawerThemeData(backgroundColor: whiteColor));
 }

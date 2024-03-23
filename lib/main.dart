@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:news_app/Home/home_screen.dart';
 import 'package:news_app/Providers/settings_Provider.dart';
-import 'package:news_app/Settings/settings.dart';
 import 'package:news_app/myTheme.dart';
 import 'package:news_app/splash_screen.dart';
 import 'package:provider/provider.dart';
+
+import 'Home/Settings/settings_widget.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),
-        Settings.routeName: (context) => Settings(),
+        SettingsWidget.routeName: (context) => SettingsWidget(),
       },
       title: 'News App',
     );
