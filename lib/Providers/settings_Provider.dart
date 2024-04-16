@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
 class SettingsProvider extends ChangeNotifier {
-  String currantLanguage = 'en';
+  String appLanguage = 'en';
 
-  void changeLanguage(String newLanguage) {
-    currantLanguage = newLanguage;
+  Future<void> changeLanguage(String newLanguage) async {
+    if (appLanguage == newLanguage) {
+      return;
+    }
+    appLanguage = newLanguage;
     notifyListeners();
   }
 }

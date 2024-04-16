@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/Model/SourceResponse.dart';
 import 'package:news_app/myTheme.dart';
 
 class SourceTabItem extends StatelessWidget {
-  String source;
+  Source source;
   bool isSelected;
 
   SourceTabItem({super.key, required this.isSelected, required this.source});
@@ -16,7 +17,7 @@ class SourceTabItem extends StatelessWidget {
           border: Border.all(color: MyTheme.greenColor, width: 2),
           color: isSelected ? MyTheme.greenColor : Colors.transparent),
       child: Text(
-        source,
+        source.name ?? '',
         style: TextStyle(
             fontSize: 18,
             color: isSelected ? Colors.white : MyTheme.greenColor),

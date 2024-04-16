@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:news_app/Home/Categories/CategoryDetails/category_details.dart';
 import 'package:news_app/Home/Categories/categories_widget.dart';
+import 'package:news_app/Home/SearchWidget/news_search.dart';
 import 'package:news_app/Home/custom_drawer.dart';
 import 'package:news_app/Model/category_model.dart';
 
@@ -23,13 +24,24 @@ class _HomeScreenState extends State<HomeScreen> {
       categoryClick: onCategoryClick,
     );
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () {
+                showSearch(context: context, delegate: NewsSearch());
+              },
+              icon: Icon(
+                Icons.search,
+                size: 35,
+              ))
+        ],
         title: Text(
-          '${AppLocalizations.of(context)!.news}',
+          selectedScreen == Settings()
+              ? 'Settings'
+              : '${AppLocalizations.of(context)!.news}',
         ),
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(40))),
@@ -38,7 +50,12 @@ class _HomeScreenState extends State<HomeScreen> {
         itemClick: onMenuItemClick,
       ),
       body: Stack(children: [
-        Image(image: AssetImage('assets/images/main_background.png')),
+        Image(
+          image: AssetImage('assets/images/main_background.png'),
+          height: double.infinity,
+          width: double.infinity,
+          fit: BoxFit.cover,
+        ),
         selectedScreen
       ]),
     );
@@ -55,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
       setState(() {});
     } else {
       Navigator.pop(context);
-      selectedScreen = SettingsWidget();
+      selectedScreen = Settings();
       setState(() {});
     }
   }

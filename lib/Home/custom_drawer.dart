@@ -35,7 +35,7 @@ class CustomDrawer extends StatelessWidget {
               onTap: () => itemClick(MenuItem.Settings),
               child: DrawerItems(
                 icon: Icons.settings,
-                text: '${AppLocalizations.of(context)!.settings}',
+                text: '${AppLocalizations.of(context)!.setting}',
               ),
             )
           ],

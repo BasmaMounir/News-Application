@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class MyTheme {
   static const Color greenColor = Color(0xff39A552);
   static const Color whiteColor = Color(0xffffffff);
+  static const Color blackColor = Color(0xff000000);
   static ThemeData lightTheme = ThemeData(
       primaryColor: greenColor,
       appBarTheme: const AppBarTheme(
