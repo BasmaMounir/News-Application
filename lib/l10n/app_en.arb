@@ -1,0 +1,17 @@
+{
+"news": "News App",
+  "setting": "Settings",
+  "categories": "Categories",
+  "pick": "pick your category of interest",
+  "sports": "Sports",
+  "general": "General",
+  "health": "Health",
+  "business": "Business",
+  "entertainment":"Entertainment",
+  "science": "Science",
+  "technology": "Technology",
+  "language": "Language",
+  "english": "English",
+  "arabic": "Arabic",
+  "appLanguage": "en"
+}
