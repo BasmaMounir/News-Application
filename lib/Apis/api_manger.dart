@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:news_app/Home/Apis/api_constants.dart';
+import 'package:news_app/Apis/api_constants.dart';
 import 'package:news_app/Model/NewsResponse.dart';
 import 'package:news_app/Model/SourceResponse.dart';
 
@@ -23,7 +23,7 @@ class ApiManger {
 
   // https://newsapi.org/v2/everything?q=bitcoin&apiKey=4c3e3a9ebd4642aba61675ea341e2c70
 
-  static Future<NewsResponse?> getNewsById(String? sourceID) async {
+  static Future<NewsResponse> getNewsById(String? sourceID) async {
     Uri url = Uri.https(ApiConstants.baseUrl, ApiConstants.newsApis,
         {'apiKey': ApiConstants.apiKey, 'sources': sourceID});
     try {
