@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/Home/Apis/api_manger.dart';
+import 'package:news_app/Apis/api_manger.dart';
 import 'package:news_app/Home/Categories/CategoryDetails/Cubit/news_list_view_model.dart';
 import 'package:news_app/Home/Categories/CategoryDetails/Cubit/states.dart';
 import 'package:news_app/Home/Categories/CategoryDetails/article_widget.dart';
